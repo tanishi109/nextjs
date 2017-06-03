@@ -1,6 +1,8 @@
 import Layout from '../components/MyLayout.js'
 import Markdown from '../components/Markdown'
 
+import {styles} from '../styles/post'
+
 export default (props) => (
   <Layout>
    <h1>{props.url.query.title}</h1>
@@ -15,25 +17,6 @@ And we can have a title as well.
 And here's the content.
      `}/>
    </div>
-   <style jsx global>{`
-     .markdown {
-       font-family: 'Arial';
-     }
-
-     .markdown a {
-       text-decoration: none;
-       color: blue;
-     }
-
-     .markdown a:hover {
-       opacity: 0.6;
-     }
-
-     .markdown h3 {
-       margin: 0;
-       padding: 0;
-       text-transform: uppercase;
-     }
-  `}</style>
+   <style jsx global>{styles}</style>
   </Layout>
 )
